@@ -1,0 +1,63 @@
+//@import 'vue-multiselect/dist/vue-multiselect.css'
+
+// Vue Multiselect
+// ---------------------------------------------------------------------------------------------------------------------
+
+[data-bs-theme=dark] .multiselect
+	--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23adb5bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e")
+
+.multiselect
+	--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e")
+	color: var(--bs-body-color)
+
+	.multiselect__select
+		&:before
+			z-index: 2
+			display: block
+			width: 16px
+			height: 12px
+			border: 0
+			background-repeat: no-repeat
+			background-image: var(--bs-form-select-bg-img)
+			position: absolute
+			margin: 0
+			top: 50%
+			right: 10px
+			transform: translateY(-50%)
+
+	.multiselect__spinner
+		background: var(--bs-body-bg)
+		height: calc(100% - 2px)
+		aspect-ratio: 1
+
+	.multiselect__tags
+		background: var(--bs-body-bg)
+		border-color: var(--bs-border-color)
+		padding-top: 6px
+		min-height: 38px
+
+	.multiselect__placeholder
+		font-size: 1rem
+		padding-top: 0
+		margin-bottom: 4px
+		padding-left: 4px
+
+
+	.multiselect__input,
+	.multiselect__single
+		background: var(--bs-body-bg)
+		padding-top: 2px
+		margin-bottom: 6px
+		color: var(--bs-body-color)
+
+		// placeholder color
+		&::placeholder
+			color: var(--bs-body-color)
+
+	.multiselect__content-wrapper
+		border-color: var(--bs-border-color)
+
+	&.multiselect--active
+		.multiselect__input
+			padding-left: 4px
+			padding-top: 2px

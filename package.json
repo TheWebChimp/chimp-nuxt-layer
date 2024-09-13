@@ -1,0 +1,29 @@
+{
+	"name": "quantum-base",
+	"type": "module",
+	"version": "0.0.1",
+	"main": "./nuxt.config.ts",
+	"scripts": {
+		"dev": "nuxt dev .playground",
+		"build": "nuxt build .playground",
+		"generate": "nuxt generate .playground",
+		"preview": "nuxt preview .playground",
+		"lint": "eslint .",
+		"postinstall": "nuxt prepare .playground"
+	},
+	"devDependencies": {
+		"@nuxtjs/i18n": "^8.0.0-rc.5",
+		"@pinia/nuxt": "^0.4.11",
+		"@sidebase/nuxt-auth": "^0.6.0-alpha.2",
+		"nuxt": "^3.6.2",
+		"nuxt-icon": "^0.6.10",
+		"nuxt-svgo": "^3.0.1",
+		"sass": "^1.62.1",
+		"sass-loader": "^13.2.2"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.11.7",
+		"bootstrap": "^5.3.3",
+		"pinia": "^2.1.4"
+	}
+}

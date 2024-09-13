@@ -1,0 +1,157 @@
+/*Variables
+--------------------------------------------------------------------------------------------------------------------- */
+@import "base.variables";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "globals";
+@import "plugins";
+
+
+$brand-colors: (
+	"brand1": $brand1,
+	"brand2": $brand2,
+	"brand3": $brand3,
+	"brand4": $brand4,
+	"brand5": $brand5,
+	"primary": $primary,
+	"secondary": $secondary
+);
+
+$theme-colors: map-merge($theme-colors, $brand-colors);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* Generals
+--------------------------------------------------------------------------------------------------------------------- */
+
+:root {
+
+	//font-size: 14px;
+}
+
+* {
+	position: relative;
+}
+
+html {
+
+	min-height: 100vh;
+}
+
+body {
+
+	min-height: 100vh;
+}
+
+#__nuxt {
+
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.btn-primary {
+
+	@include button-variant($primary, $primary, white, darken($primary, 10%), darken($primary, 10%), white, $primary, $primary, white, darken($primary, 10%), darken($primary, 10%), white);
+}
+
+.btn-white {
+
+	@include button-variant(white, $gray-300, $brand3, darken(white, 10%), darken(white, 10%), $brand3);
+}
+
+.text-muted {
+
+	color: $gray-500 !important;
+}
+
+.fs-7 {
+
+	font-size: 0.875rem !important;
+}
+
+.no-pointer-events {
+
+	pointer-events: none;
+}
+
+.vc-color-wrap {
+
+	width: 24px !important;
+	height: auto !important;
+	aspect-ratio: 1;
+	border-radius: 0.25rem !important;
+}
+
+.v-toast {
+
+	padding-bottom: 3rem !important;
+}
+
+.scroll-wrapper-default {
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	scrollbar-gutter: stable;
+}
+
+.scroll-wrapper {
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	scrollbar-gutter: stable;
+
+	@extend .pretty-scrolls;
+}
+
+/* Styled form-control
+--------------------------------------------------------------------------------------------------------------------- */
+
+.form-control.styled {
+
+	border-radius: 0 !important;
+	border-width: 0 !important;
+	border-bottom-width: 1px !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+
+	// Disable outline
+	box-shadow: none !important;
+}
+
+.form-floating:has(.form-control.styled) {
+
+	.form-label {
+
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		left: -3px;
+	}
+}
+
+.form-floating > .form-control:focus ~ label::after, .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-control-plaintext ~ label::after, .form-floating > .form-select ~ label::after {
+
+	background: transparent;
+}
+
+.input-group:has(.form-control.is-invalid) + .invalid-feedback {
+
+	display: block;
+}
+
+/* Dashboard modal
+--------------------------------------------------------------------------------------------------------------------- */
+
+.dashboard-modal .modal-content {
+
+	max-width: 800px;
+}
