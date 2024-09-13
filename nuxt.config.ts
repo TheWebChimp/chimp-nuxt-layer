@@ -1,7 +1,9 @@
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
+import 'dotenv/config'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
+const layersDir = process.env.ENVIRONMENT === 'development' ? '..' : './node_modules/@thewebchimp/chimp-nuxt-layer'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -16,7 +18,7 @@ export default defineNuxtConfig({
 		css: {
 			preprocessorOptions: {
 				sass: {
-					additionalData: '@import "./layers/quantum-base/assets/styles/variables.sass"\nbody\n\tmargin: 0',
+					additionalData: `@import "${ layersDir }/assets/styles/variables.sass"\nbody\n\tmargin: 0`,
 				},
 			}
 		}

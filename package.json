@@ -1,8 +1,14 @@
 {
-	"name": "quantum-base",
+	"name": "@thewebchimp/chimp-nuxt-layer",
 	"type": "module",
 	"version": "0.0.1",
 	"main": "./nuxt.config.ts",
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheWebChimp/chimp-nuxt-layer.git"
+	},
+	"license": "ISC",
 	"scripts": {
 		"dev": "nuxt dev .playground",
 		"build": "nuxt build .playground",
@@ -24,6 +30,7 @@
 	"dependencies": {
 		"@popperjs/core": "^2.11.7",
 		"bootstrap": "^5.3.3",
+		"dotenv": "^16.4.5",
 		"pinia": "^2.1.4"
 	}
 }
