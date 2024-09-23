@@ -1,7 +1,7 @@
 {
 	"name": "@thewebchimp/chimp-nuxt-layer",
 	"type": "module",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"main": "./nuxt.config.ts",
 	"private": false,
 	"repository": {
@@ -14,8 +14,7 @@
 		"build": "nuxt build .playground",
 		"generate": "nuxt generate .playground",
 		"preview": "nuxt preview .playground",
-		"lint": "eslint .",
-		"postinstall": "nuxt prepare .playground"
+		"lint": "eslint ."
 	},
 	"devDependencies": {
 		"@nuxtjs/i18n": "^8.0.0-rc.5",
