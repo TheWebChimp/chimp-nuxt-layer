@@ -1,7 +1,7 @@
 {
 	"name": "@thewebchimp/chimp-nuxt-layer",
 	"type": "module",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"main": "./nuxt.config.ts",
 	"private": false,
 	"repository": {
@@ -23,7 +23,7 @@
 		"nuxt": "^3.6.2",
 		"nuxt-icon": "^0.6.10",
 		"nuxt-svgo": "^3.0.1",
-		"sass": "^1.62.1",
+		"sass": "1.77.6",
 		"sass-loader": "^13.2.2"
 	},
 	"dependencies": {
